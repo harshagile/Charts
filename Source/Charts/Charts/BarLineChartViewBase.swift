@@ -16,6 +16,8 @@ import CoreGraphics
     import UIKit
 #endif
 
+var showLegend:Bool = true
+
 /// Base-class of LineChart, BarChart, ScatterChart and CandleStickChart.
 open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartDataProvider, NSUIGestureRecognizerDelegate
 {
@@ -266,7 +268,9 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
             renderer.drawValues(context: context)
         }
 
-        _legendRenderer.renderLegend(context: context)
+        if showLegend{
+            _legendRenderer.renderLegend(context: context)
+        }
 
         drawDescription(context: context)
         

@@ -22,7 +22,7 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
     /// (entry numbers greater than this value will cause value-labels to disappear)
     internal var _maxVisibleCount = 100
     
-    var showLegend:Bool = true
+    public var showLegend:Bool = true
     
     /// flag that indicates if auto scaling on the y axis is enabled
     private var _autoScaleMinMaxEnabled = false
